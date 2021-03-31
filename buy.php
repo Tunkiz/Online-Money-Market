@@ -25,8 +25,6 @@ else{
 	header("location : bidding.php");
 	break;
 }}
-}
-
- 
+} 
 $conn->close();
 ?>

@@ -135,14 +135,14 @@ body, html {
 
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">X</a>
-  <a href="Dashboard.php" onclick="w3_close()" class="w3-bar-item w3-button active">Dashboard</a>
-  <a href="bidding.php" onclick="w3_close()" class="w3-bar-item w3-button">Bidding</a>
-  <a href="outgoing.php" onclick="w3_close()" class="w3-bar-item w3-button">Pending Bid</a>
-   <a href="incoming.php" onclick="w3_close()" class="w3-bar-item w3-button active">incoming Bid</a>
-  <a href="cashout.php" onclick="w3_close()" class="w3-bar-item w3-button">Sell out</a>
-  <a href="profile.html" onclick="w3_close()" class="w3-bar-item w3-button">Profile</a>
-  <a href="logout.php" onclick="w3_close()" class="w3-bar-item w3-button">Logout</a>
+  <a href="javascript:void(0)" onclick="close()" class="w3-bar-item w3-button w3-large w3-padding-16">X</a>
+  <a href="Dashboard.php" onclick="close()" class="w3-bar-item w3-button active">Dashboard</a>
+  <a href="bidding.php" onclick="close()" class="w3-bar-item w3-button">Bidding</a>
+  <a href="outgoing.php" onclick="close()" class="w3-bar-item w3-button">Pending Bid</a>
+   <a href="incoming.php" onclick="close()" class="w3-bar-item w3-button active">incoming Bid</a>
+  <a href="cashout.php" onclick="close()" class="w3-bar-item w3-button">Sell out</a>
+  <a href="profile.html" onclick="close()" class="w3-bar-item w3-button">Profile</a>
+  <a href="logout.php" onclick="close()" class="w3-bar-item w3-button">Logout</a>
   
 </nav>
 <header class="w3-container w3-red w3-center" style="padding:40px 16px; margin-bottom: -40px;: ">
@@ -176,19 +176,10 @@ $conn->close();
 
   
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 
-function w3_open() {
+function open() {
   if (mySidebar.style.display === 'block') {
     mySidebar.style.display = 'none';
   } else {
@@ -197,7 +188,7 @@ function w3_open() {
 }
 
 // Close the sidebar with the close button
-function w3_close() {
+function close() {
     mySidebar.style.display = "none";
 }
 </script>
